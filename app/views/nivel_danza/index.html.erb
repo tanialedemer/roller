@@ -1,0 +1,21 @@
+<h1>NivelDanza#index</h1>
+<p>Find me in app/views/nivel_danza/index.html.erb</p>
+<h1>Athlete#index</h1>
+<table class="table ">
+	  <thead class="thead-dark">
+	<tr><TH>Descripción</TH><TH colspan="2">
+		<%= link_to 'Nuevo', nivel_danza_new_path , :class => "btn btn-primary" %></TH></tr>
+</thead>
+	<tbody>
+	<% @nivel_danzas.each do |f| %>
+
+	<tr><TD><%= f.description %></TD>
+		<TD><%= link_to 'Editar', nivel_danza_edit_path(f['id']), :class => "btn btn-primary" %></TD><TD>
+<%= link_to 'Borrar', nivel_danza_borrar_path(f['id']),
+                                   :data => {:confirm => "You sure?",
+                                   :method => "destroy"} , :class => "btn btn-danger"%>
+		</TD>
+	</tr>
+    <% end %>
+    </tbody>
+</table>

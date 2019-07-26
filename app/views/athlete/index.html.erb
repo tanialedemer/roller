@@ -1,0 +1,45 @@
+<center><h2>Atletas</h2></center>
+<div class="jumbotron text-center">
+<table class="table ">
+	  <thead class="thead-dark">
+	<tr>
+		<TH>Apellido</TH>
+		<TH>Nombre</TH>
+		<TH>Documento</TH>
+		<TH>Fecha de Nacimiento</TH>
+		<TH>Edad</TH>
+		<TH>Nivel Escuela</TH>
+		<TH>Nivel Libre</TH>
+		<TH>Nivel Danza</TH>
+		<TH>Escuela o Club</TH>
+		<TH>Año</TH>
+		<TH>Estado</TH>
+
+		<TH colspan="2">
+		<%= link_to 'Nuevo', athlete_new_path , :class => "btn btn-primary" %></TH></tr>
+</thead>
+	<tbody>
+	<% @athletes.each do |f| %>
+
+	<tr><TD><%= f.apellido %></TD>
+		<TD><%= f.nombre %></TD>
+		<TD><%= f.doc %></TD>
+		<TD><%= f.fecha_nac %></TD>
+		<TD><%= f.edad %></TD>
+		<TD><%= f.nivel_escuela %></TD>
+		<TD><%= f.nivel_libre %></TD>
+		<TD><%= f.nivel_danza %></TD>
+		<TD><%= f.escuela %></TD>
+		<TD><%= f.year_birth %></TD>
+		<TD><%= f.estado %></TD>
+
+		<TD><%= link_to 'Editar', athlete_edit_path(f['id']), :class => "btn btn-primary" %></TD><TD>
+<%= link_to 'Borrar', athlete_borrar_path(f['id']),
+                                   :data => {:confirm => "You sure?",
+                                   :method => "destroy"} , :class => "btn btn-danger"%>
+		</TD>
+	</tr>
+    <% end %>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,58 @@
+<form>
+  <div class="form-group">
+<ul>
+<%
+@athlete.errors.full_messages.each do |m|
+%>
+<li> <%= m %></li>
+<% end %>
+</ul>
+<p>
+<%= p.label :Apellido %> </br>
+<%= p.text_field :apellido %>
+</p>
+<p>
+<%= p.label :Nombre %> </br>
+<%= p.text_field :nombre %>
+</p>
+<p>
+<%= p.label :Documento %> </br>
+<%= p.text_field :doc %>
+</p>
+<p>
+<%= p.label :fecha_de_Nacimiento %> </br>
+<%= p.date_field :fecha_nac %>
+</p>
+<p>
+<%= p.label :Edad %> </br>
+<%= p.text_field :edad %>
+</p>
+<p>
+<%= p.label :nivel_escuela_id %> </br>
+<%= p.collection_select(:nivel_escuela, NivelEscuela.all, :id, :description)  %>
+</p>
+<p>
+<%= p.label :nivel_libre_id %> </br>
+<%= p.collection_select(:nivel_libre, NivelLibre.all, :id, :description)  %>
+</p>
+<p>
+<%= p.label :nivel_danza_id %> </br>
+<%= p.collection_select(:nivel_danza, NivelDanza.all, :id, :description)  %>
+</p>
+<p>
+<%= p.label :escuela %> </br>
+<%= p.text_field :escuela %>
+</p>
+<p>
+<%= p.label :Año %> </br>
+<%= p.text_field :year_birth %>
+</p>
+<p>
+<%= p.label :estado %> </br>
+<%= p.text_field :estado %>
+</p>
+<p>
+<%= p.submit "Enviar" %>
+</p>
+</div>
+</form>

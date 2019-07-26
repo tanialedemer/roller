@@ -1,0 +1,2 @@
+class NivelDanza < ApplicationRecord
+end

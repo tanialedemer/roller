@@ -1,0 +1,20 @@
+<h1>NivelEscuela#index</h1>
+<p>Find me in app/views/nivel_escuela/index.html.erb</p>
+<table class="table ">
+	  <thead class="thead-dark">
+	<tr><TH>Descripción</TH><TH colspan="2">
+		<%= link_to 'Nuevo', nivel_escuela_new_path , :class => "btn btn-primary" %></TH></tr>
+</thead>
+	<tbody>
+	<% @nivel_escuelas.each do |f| %>
+
+	<tr><TD><%= f.description %></TD>
+		<TD><%= link_to 'Editar', nivel_escuela_edit_path(f['id']), :class => "btn btn-primary" %></TD><TD>
+<%= link_to 'Borrar', nivel_escuela_borrar_path(f['id']),
+                                   :data => {:confirm => "You sure?",
+                                   :method => "destroy"} , :class => "btn btn-danger"%>
+		</TD>
+	</tr>
+    <% end %>
+    </tbody>
+</table>

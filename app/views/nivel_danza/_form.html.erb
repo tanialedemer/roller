@@ -1,0 +1,18 @@
+<form>
+  <div class="form-group">
+<ul>
+<%
+@nivel_danza.errors.full_messages.each do |m|
+%>
+<li> <%= m %></li>
+<% end %>
+</ul>
+<p>
+<%= p.label :Descripción %> </br>
+<%= p.text_field :description %>
+</p>
+<p>
+<%= p.submit "Guardar" %>
+</p>
+</div>
+</form>

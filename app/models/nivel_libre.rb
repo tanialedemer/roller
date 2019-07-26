@@ -1,0 +1,2 @@
+class NivelLibre < ApplicationRecord
+end

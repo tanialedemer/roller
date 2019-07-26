@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apellido: Irgazabal Marecos
+  nombre: Maria José
+  doc: 1234567
+  fecha_nac: 2019-07-21
+  edad: 1
+  nivel_escuela: 1
+  nivel_libre: 3
+  nivel_danza: Iniciación
+  escuela: 24 de Junio
+  year_birth: 2019
+  estado: Activo
+
+two:
+  apellido: Jara Paredes
+  nombre: Sara Macarena
+  doc: 1345678
+  fecha_nac: 2019-07-21
+  edad: 1
+  nivel_escuela: 1
+  nivel_libre: 1
+  nivel_danza: Avanzado
+  escuela: 24 de Junio
+  year_birth: 2019
+  estado: Activo

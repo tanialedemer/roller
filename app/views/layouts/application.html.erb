@@ -1,15 +1,27 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
   <head>
     <title>Roller</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://blog.nubecolectiva.com/wp-content/uploads/2018/08/faviconcc.png">
+    
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Con estas 2 líneas llamamos a los archivos CSS y Javascript de Bootstrap y demás -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
+    <!-- Utilidad CSS de Bootstrap externa (No es necesario, si esta línea ya debería funcionarte Bootstrap) -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
   </head>
 
   <body>
+  <%= render 'layouts/nav' %>
+    <!-- Aca renderizamos los elementos dentro del body en la etiqueta  <%= yield %> -->
     <%= yield %>
+
   </body>
 </html>

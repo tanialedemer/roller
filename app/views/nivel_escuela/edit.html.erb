@@ -1,0 +1,6 @@
+<h1>NivelEscuela#edit</h1>
+<p>Find me in app/views/nivel_escuela/edit.html.erb</p>
+<%= form_for @nivel_escuela, :url => { :action => :edit } do |p| %>
+<%= p.hidden_field :id %>
+<%= render "form", p: p %>
+<% end %>

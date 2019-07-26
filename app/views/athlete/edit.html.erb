@@ -1,0 +1,6 @@
+<h1>Athlete#edit</h1>
+<p>Find me in app/views/athlete/edit.html.erb</p>
+<%= form_for @athlete, :url => { :action => :edit } do |p| %>
+<%= p.hidden_field :id %>
+<%= render "form", p: p %>
+<% end %>
